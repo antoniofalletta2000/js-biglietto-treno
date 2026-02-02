@@ -22,16 +22,24 @@ let discountPrice = 0
 let message
 
 
-
+//SE l'utente è minorenne (con età inferiore a 18 anni) ALLORA avrà uno sconto del 20% sul prezzo del biglietto
 if (age < 18) {
     discountPrice = .20
-} else if (age >= 65 && age < 120) {
+} 
+//SE l'utente ha un'età maggiore o uguale a 65 anni e minore di 120 anni ALLORA avrà uno sconto del 40% sul prezzo del biglietto
+else if (age >= 65 && age < 120) {
     discountPrice = .40
-} else if (age >= 120){
+} 
+//SE l'utente ha un'età maggiore o uguale a 120 anni spunterà un'alert con scritto (Error...try again)
+else if (age >= 120){
     alert("Error...try again")
-} else {
+} 
+//ALTRIMENTI l'utente non avrà nessuno sconto sul prezzo del biglietto
+else {
     discountPrice = 0
 }
 
+
+//COSTO TOTALE DEL BIGLIETTO
 const total = (price - (price * discountPrice))
 console.log(total.toFixed(2));
