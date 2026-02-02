@@ -23,9 +23,9 @@ let message
 
 
 
-if (age < 17) {
+if (age < 18) {
     discountPrice = .20
-} else if (age >= 65&&age < 120) {
+} else if (age >= 65 && age < 120) {
     discountPrice = .40
 } else if (age >= 120){
     alert("Error...try again")
